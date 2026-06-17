@@ -1,0 +1,404 @@
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+							<style>
+								body {
+									background-color: white; /* Ensure the iframe has a white background */
+								}
+
+								
+							</style>
+                        </head>
+                        <body>
+                            <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Walkthrough Highlights</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .slide {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 40px 44px 36px;
+      max-width: 960px;
+      width: 100%;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .accent-line {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #b794f4, #4fd1c5);
+      border-radius: 10px;
+      margin: 12px auto 0;
+    }
+
+    /* ── Section Title ── */
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 14px;
+    }
+
+    /* ── Top Row ── */
+    .top-row {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Controls Card ── */
+    .card-controls {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 24px 26px;
+    }
+
+    .big-number {
+      font-size: 54px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #b794f4, #4fd1c5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .big-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .reason-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .reason-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .reason-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Time Savings Card ── */
+    .card-savings {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .savings-icon { font-size: 36px; margin-bottom: 10px; }
+
+    .savings-value {
+      font-size: 52px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #68d391, #4fd1c5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .savings-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .savings-sub {
+      font-size: 11.5px;
+      color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 4px 14px;
+    }
+
+    /* ── FY Comparison Card ── */
+    .card-comparison {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 28px 32px;
+    }
+
+    .fy-scorecard {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    /* ── FY Box ── */
+    .fy-box {
+      flex: 1;
+      min-width: 180px;
+      text-align: center;
+      padding: 20px 24px;
+      border-radius: 16px;
+    }
+
+    .fy-box.fy26 {
+      background: rgba(104,211,145,0.08);
+      border: 1px solid rgba(104,211,145,0.2);
+    }
+
+    .fy-box.fy25 {
+      background: rgba(252,129,129,0.08);
+      border: 1px solid rgba(252,129,129,0.2);
+    }
+
+    .fy-year {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .fy26 .fy-year { color: #68d391; }
+    .fy25 .fy-year { color: #fc8181; }
+
+    .fy-pct {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .fy26 .fy-pct { color: #68d391; }
+    .fy25 .fy-pct { color: #fc8181; }
+
+    .fy-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+
+    /* ── Arrow Middle ── */
+    .fy-arrow {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 24px;
+      flex-shrink: 0;
+    }
+
+    .arrow-icon { font-size: 32px; margin-bottom: 6px; }
+
+    .arrow-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: #68d391;
+      line-height: 1;
+    }
+
+    .arrow-label {
+      font-size: 11px;
+      color: rgba(104,211,145,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    /* ── Improvement Banner ── */
+    .improvement-banner {
+      margin-top: 20px;
+      background: rgba(104,211,145,0.08);
+      border: 1px solid rgba(104,211,145,0.2);
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .imp-icon { font-size: 22px; flex-shrink: 0; }
+
+    .imp-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    .imp-text strong { color: #68d391; font-size: 15px; }
+
+    /* ── Footer ── */
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin: 28px 0 16px;
+    }
+
+    .footer-note {
+      font-size: 11px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div class="slide">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Walkthrough Highlights</h1>
+    <div class="accent-line"></div>
+  </div>
+
+  <!-- Top Row -->
+  <div class="top-row">
+
+    <!-- Controls Not Requiring WT -->
+    <div class="card-controls">
+      <div class="section-title">🚫 Controls Not Requiring WT</div>
+      <div class="big-number">175</div>
+      <div class="big-label">Controls Not Requiring WT in FY26</div>
+      <ul class="reason-list">
+        <li>
+          <div class="reason-dot" style="background:#b794f4;"></div>
+          Pre-WT Assessment identified no WT needed
+        </li>
+        <li>
+          <div class="reason-dot" style="background:#4fd1c5;"></div>
+          Low Risk controls
+        </li>
+        <li>
+          <div class="reason-dot" style="background:#68d391;"></div>
+          No changes from prior year
+        </li>
+      </ul>
+    </div>
+
+    <!-- Time Savings -->
+    <div class="card-savings">
+      <div class="section-title">⏱️ Estimated Time Savings</div>
+      <div class="savings-icon">⏳</div>
+      <div class="savings-value">260 hrs</div>
+      <div class="savings-label">Estimated Hours Saved in FY26</div>
+      <div class="savings-sub">175 controls × ~1.5 hrs each</div>
+    </div>
+
+  </div>
+
+  <!-- FY Comparison -->
+  <div class="card-comparison">
+    <div class="section-title">📈 WT Completion Rate — FY26 vs FY25 (as of June)</div>
+
+    <div class="fy-scorecard">
+
+      <!-- FY25 -->
+      <div class="fy-box fy25">
+        <div class="fy-year">FY25</div>
+        <div class="fy-pct">47%</div>
+        <div class="fy-desc">WT Completed<br/>by June 2025</div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="fy-arrow">
+        <div class="arrow-icon">🚀</div>
+        <div class="arrow-value">+45%</div>
+        <div class="arrow-label">Improvement</div>
+      </div>
+
+      <!-- FY26 -->
+      <div class="fy-box fy26">
+        <div class="fy-year">FY26</div>
+        <div class="fy-pct">92%</div>
+        <div class="fy-desc">WT Completed<br/>by June 2026</div>
+      </div>
+
+    </div>
+
+    <!-- Improvement Banner -->
+    <div class="improvement-banner">
+      <div class="imp-icon">🏆</div>
+      <div class="imp-text">
+        Year-over-Year improvement of <strong>+45%</strong> in WT Completion Rate —
+        from <strong style="color:#fc8181;">47%</strong> in FY25 to
+        <strong style="color:#68d391;">92%</strong> in FY26 as of June.
+      </div>
+    </div>
+
+  </div>
+
+  <hr/>
+  <p class="footer-note">
+    * 175 controls not requiring WT via Pre-WT Assessment &nbsp;|&nbsp;
+    260 hrs estimated time saved (175 × ~1.5 hrs) &nbsp;|&nbsp;
+    WT Completion: FY26 92% vs FY25 47% &nbsp;|&nbsp; Year-over-Year improvement: +45%
+  </p>
+
+</div>
+</body>
+</html>
+
+							<script>
+                            	
+							</script>
+                        </body>
+                        </html>
+                    
